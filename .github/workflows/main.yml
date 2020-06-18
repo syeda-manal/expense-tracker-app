@@ -35,4 +35,4 @@ jobs:
     - name: install Surge
       run: npm install -g surge
     - name: Run surge
-      run: surge ./build bootcamp-project1-expensetracker-manal.surge.sh
+      run: surge ./build bootcamp-project1-expensetracker-manal.surge.sh --token ${{secrets.SURGE_TOKEN}} 
