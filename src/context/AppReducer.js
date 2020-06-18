@@ -1,4 +1,3 @@
-import React from 'react'
 
 const AppReducer = (state, actions)=>{
     switch(actions.type){
