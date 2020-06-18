@@ -1,0 +1,31 @@
+How to use Context API
+    Create Context: 
+        First Create a Context  i.e. create a .js file in which import 
+        {createContext} and create a const context variable using 
+        createContext()
+            const contextValue = createContext(1);
+        
+    In root component (in our case App.js) import above created 
+    context. use a wrapper with imported context i.e. contextValue.Provider
+    to wrap component tree in which you want to use this context. 
+    also pass default value as value ="1" with Provider tag. this 
+    is the value that will be used whenever context is called.
+        you can also pass any variable, object (stat object etc) 
+        in Provider tag
+
+    In component where you want to use context import context file as well as 
+    import useContext. context value can be accessed via 
+    useContext(contextValue)
+
+How to use useReducer
+    Create a Global state:
+        Create Reducer function in a seperate .js file. that takes current state and action.
+        use switch case inside reducer function to handle different actions on state.
+
+    Use reducer function:
+        In component where want to use/change/update state, call useReducer to use the 
+        above reducer function. useReducer accepts a reducer function with the application
+        initial state and a default argument, returns the 
+        current application state, then dispatches a function.
+
+
