@@ -15,7 +15,9 @@ function AddTransaction() {
             amount: +amount
         }
         addTransaction(newTransaction);
+        console.log(newTransaction);
     }
+    
 
     return (
         <div>
@@ -26,13 +28,11 @@ function AddTransaction() {
                     <input type = "text" value = {text} onChange = {(e)=>setText(e.target.value)} placeholder= "Enter Text...." />
                 </div>
                 <div className = "form-control">
-                    <label htmlFor= "amount">Amount 
-                    <br />
-                    (negative-expense, positive-income</label>
-                    <input type = "number" value = {amount} onChange = {(e)=> setAmount(e.target.value)} placeholder= "Enter Amount...." />
+                    <label htmlFor= "amount">Amount (negative-expense, positive-income)</label>
+                    <input type = "float" value = {amount} onChange = {(e)=> setAmount(e.target.value)} placeholder= "Enter Amount...." />
                 </div>
                 
-                <button> Add Transaction </button>
+                <button className = "btn"> Add Transaction </button>
                 
             </form>
         </div>
