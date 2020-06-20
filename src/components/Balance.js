@@ -3,8 +3,11 @@ import {GlobalContext} from '../context/GlobalData';
 
 const Balance = () => {
     const {transactions} = useContext(GlobalContext);
-    const amount = transactions.map(transaction => transaction.amount);
-    const balance = amount.reduce((accumulator, nextValue)=> (accumulator+= nextValue),0);
+    // const amount = transactions.map(transaction = > transaction.amount);
+    // const balance = amount.reduce((accumulator, nextValue)=> (accumulator+= nextValue),0);
+    // combined above two statements into a single statemnet below
+    const balance = transactions.map(transaction => transaction.amount)
+                    .reduce((accumulator, nextValue)=> (accumulator+= nextValue),0);
     let formatted_balance = balance.toFixed(2);
     formatted_balance=  parseFloat(formatted_balance).toLocaleString();        
     return (

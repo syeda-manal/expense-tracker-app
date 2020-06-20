@@ -15,7 +15,6 @@ function AddTransaction() {
             amount: +amount
         }
         addTransaction(newTransaction);
-        console.log(newTransaction);
     }
     
 

@@ -3,8 +3,7 @@ import {GlobalContext} from '../context/GlobalData';
 import Transaction from './Transaction';
 
 function TransactionList() {
-    const {transactions} = useContext(GlobalContext);
-    console.log(transactions);
+    const {transactions} = useContext(GlobalContext);   
 
     return (
         <>
